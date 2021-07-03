@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+//Components and pages
+import Home from "./pages/Home";
+import Nav from "./components/Nav";
+//Styles
+import GlobalStyles from "./components/GlobalStyles";
+//Router
+import { Route } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <GlobalStyles />
+      <Nav />
+      <Route path={["/game/:id", "/"]}>
+        <Home />
+      </Route>
     </div>
   );
 }
