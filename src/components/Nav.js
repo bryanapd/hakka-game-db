@@ -3,10 +3,13 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 import sharingan from "../img/sharingan.gif";
 import foldedN from "../img/folded_n.jpg";
+
 //Redux and Routes
 import { fetchSearch } from "../actions/gamesAction";
 import { useDispatch } from "react-redux";
 import { titleAnim } from "../animations";
+
+
 const Nav = () => {
   const dispatch = useDispatch();
   const [textInput, setTextInput] = useState("");
@@ -29,9 +32,9 @@ const Nav = () => {
         animate="show"
         onClick={clearSearched}
       >
-        <img src={foldedN} alt="logo" />
+        <img src="logo-2.png" alt="logo" />
         <motion.h1 variants={titleAnim} initial="hidden" animate="show">
-          bree
+          hakka 🔥
         </motion.h1>
       </Logo>
       <form className="search">
